@@ -58,7 +58,8 @@
   .fig b { font-family: Georgia, serif; font-size: 20px; line-height: 1.05; flex: none; }
   .fig span { font-size: 9.5px; color: var(--soft); line-height: 1.1; }
   .briefs { columns: 2; column-gap: 16px; list-style: none; }
-  .briefs li { break-inside: avoid; display: flex; align-items: center; gap: 6px; font-size: 11.5px; line-height: 1.2; height: 25px; border-bottom: 1px dotted #c4baa6; white-space: nowrap; overflow: hidden; }
+  .briefs.more { columns: 1; margin-top: 4px; border-top: 1px solid #cfc6b4; }
+  .briefs li { break-inside: avoid; display: flex; align-items: center; gap: 6px; font-size: 11.5px; line-height: 1.2; height: 21px; border-bottom: 1px dotted #c4baa6; white-space: nowrap; overflow: hidden; }
   .briefs li .num { width: 18px; height: 15px; border-radius: 3px; font-size: 9px; flex: none; }
   .briefs li b { font-weight: 700; }
   footer { position: absolute; left: 16px; right: 16px; bottom: 6px; display: flex; justify-content: space-between; font-size: 9.5px; color: var(--soft); border-top: 1px solid var(--rule); padding-top: 3px; }
@@ -69,7 +70,7 @@
 <header>
   <div class="cal cond"><div class="mon">Nov</div><div class="day">17</div><div class="wd">Tue · 2026</div></div>
   <div class="mast">
-    <div class="topline cond"><span>The day in world news</span><span>31 stories · 6 regions · one page</span></div>
+    <div class="topline cond"><span>The day in world news</span><span>39 stories · 6 continents · one page</span></div>
     <h1>Tuesday 17 November 2026</h1>
     <div class="sub"><i>Everything on this page happened, or was first reported, on Tuesday 17 November 2026. Claims are attributed.</i></div>
   </div>
@@ -378,14 +379,9 @@
     <div class="label cond">Where it happened</div>
     <svg id="map" viewBox="0 0 360 138"></svg>
     <div class="legend cond">
-      <span class="eu">Europe/Russia</span><span class="me">Middle East</span><span class="as">Asia</span><span class="af">Africa</span><span class="am">Americas</span><span class="gl">Global</span>
+      <span class="eu">Europe/Russia</span><span class="me">Middle East</span><span class="as">Asia-Pacific</span><span class="af">Africa</span><span class="am">Americas</span><span class="gl">Global</span>
     </div>
-    <div class="figures">
-      <div class="fig"><b>1,441</b><span>drones Russia says it downed overnight</span></div>
-      <div class="fig"><b>1.4m</b><span>Gazans in acute hunger, say UN agencies</span></div>
-      <div class="fig"><b>140</b><span>of Serbia's 250 seats go to the Student List</span></div>
-      <div class="fig"><b>−849</b><span>points on the Dow before Nvidia reported</span></div>
-    </div>
+    <ul class="briefs more" id="briefs2"></ul>
   </div>
   <div>
     <div class="label cond">Also on Tuesday 17 November</div>
@@ -393,7 +389,7 @@
   </div>
 </section>
 
-<footer><span>Sources: Reuters, AP, AFP, Al Jazeera, CNN, NBC, Times of Israel, UN OHCHR, PAHO, IOM/WFP, Nvidia, IMD.</span><span>Original drawings · map pins 1–13, dots 14–31</span></footer>
+<footer><span>Sources: Reuters, AP, AFP, Al Jazeera, CNN, NBC, Times of Israel, UN OHCHR, PAHO, IOM/WFP, Nvidia, IMD.</span><span>Original drawings · map pins 1–13, dots 14–39</span></footer>
 
 <script>
 // ---------- flags ----------
@@ -539,7 +535,9 @@ const PINS = [
 // small dots for the briefs
 const DOTS = [
   ['eu', 37.6, 55.8], ['eu', 28.8, 47], ['eu', 30.5, 50.4], ['eu', 21, 52.2], ['eu', 2.35, 48.9], ['eu', 29, 41], ['eu', -0.1, 51.5],
-  ['am', -74, 40.7], ['as', 114, 22.5], ['am', -75.7, 45.4], ['as', 130.4, 33.6], ['as', 83, 16], ['af', 32.6, -25.9], ['gl', 30.7, 36.9], ['gl', -122, 37.3], ['eu', 12.6, 55.7], ['as', 100.5, 13.75],
+  ['am', -74, 40.7], ['as', 114, 22.5], ['am', -75.7, 45.4], ['as', 130.4, 33.6], ['as', 83, 16], ['af', 32.6, -25.9], ['gl', 30.7, 36.9], ['gl', -122, 37.3], ['as', 100.5, 13.75],
+  ['eu', 14.4, 50.1], ['as', 127, 37.5], ['as', 129.5, -7], ['af', 39, 3.5],
+  ['as', 101.7, 3.1], ['eu', 4.3, 52.1], ['me', 48, 29.4],
 ];
 for (const [c, lon, lat] of DOTS) svgMap += `<circle cx="${px(lon).toFixed(1)}" cy="${py(lat).toFixed(1)}" r="2.2" fill="${COLORS[c]}" stroke="#fff" stroke-width=".5"/>`;
 for (const [n, c, lon, lat, dx, dy] of PINS) {
@@ -571,12 +569,21 @@ const BRIEFS = [
   ['af', 'Mozambique', 'Mondlane’s trial opens in Maputo'],
   ['gl', 'COP31', 'talks split on fossil-fuel wording'],
   ['gl', 'Apple', 'iCloud outage “not a cyberattack”'],
-  ['eu', 'Football', 'Norway win 3–2 in Denmark'],
   ['as', 'ASEAN', 'summit backs fight on online scams'],
   ['as', 'Thailand', 'signs a trade statement with the US'],
+  ['eu', 'Prague', 'two trains collide head-on; 46 hurt'],
+  ['as', 'S. Korea', 'IMF lifts 2026 growth forecast to 3.9%'],
+  ['as', 'Indonesia', 'M6.8 Banda Sea quake; no tsunami'],
+  ['af', 'Kenya', 'WFP feeds 30,000 who fled Ethiopia'],
+  ['gl', 'Football', 'India beat Pakistan 2–1 in SAFF final'],
+  ['as', 'Malaysia', 'Macron and Anwar seal a rare-earths deal'],
+  ['eu', 'Kosovo', 'ex-president Thaçi gets 17 more months'],
+  ['me', 'Kuwait', 'air defences fire on hostile drones'],
+  ['as', 'Cook Islands', 'Cyclone Xavier hits Category 3'],
 ];
-document.getElementById('briefs').innerHTML = BRIEFS.map(([c, where, what], i) =>
-  `<li><span class="num b-${c}">${i + 14}</span><span><b class="${c}">${where}:</b> ${what}</span></li>`).join('');
+const brief = ([c, where, what], i) => `<li><span class="num b-${c}">${i + 14}</span><span><b class="${c}">${where}:</b> ${what}</span></li>`;
+document.getElementById('briefs').innerHTML = BRIEFS.slice(0, 22).map(brief).join('');
+document.getElementById('briefs2').innerHTML = BRIEFS.slice(22).map((b, i) => brief(b, i + 22)).join('');
 </script>
 </body>
 </html>

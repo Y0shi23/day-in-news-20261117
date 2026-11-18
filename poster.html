@@ -14,13 +14,18 @@
   .cond { font-family: "Avenir Next Condensed", "Arial Narrow", sans-serif; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
   .serif { font-family: Georgia, "Times New Roman", serif; }
 
-  /* masthead */
-  .topline { display: flex; justify-content: space-between; font-size: 11px; color: var(--soft); }
-  .topline .kick { color: #a8322a; }
-  h1 { font-family: Georgia, serif; font-weight: 700; font-size: 66px; line-height: 1; letter-spacing: -1.5px; margin-top: 1px; }
-  .sub { display: flex; justify-content: space-between; align-items: center; margin-top: 3px; padding-bottom: 5px; border-bottom: 3px double var(--rule); }
-  .sub i { font-family: Georgia, serif; font-size: 13px; color: #3a352f; }
-  .badge { background: #a8322a; color: #fff; font-size: 11px; padding: 2px 7px 1px; }
+  /* masthead: a navy band with a tear-off calendar page */
+  header { margin: -8px -16px 0; padding: 10px 16px 9px; background: #15233c; display: flex; gap: 16px; align-items: center; border-bottom: 4px solid #d6b25e; }
+  .cal { width: 78px; flex: none; background: #fffdf8; border-radius: 5px; overflow: hidden; text-align: center; box-shadow: 0 2px 0 #0b1322; }
+  .cal .mon { background: #b8322a; color: #fff; font-size: 15px; padding: 3px 0 2px; }
+  .cal .day { font-family: Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1; color: #15233c; padding-top: 3px; }
+  .cal .wd { font-size: 10px; color: #6b6458; padding: 2px 0 5px; }
+  .mast { flex: 1; min-width: 0; }
+  .topline { display: flex; justify-content: space-between; font-size: 11.5px; color: #d6b25e; letter-spacing: .14em; }
+  h1 { font-family: Georgia, serif; font-weight: 700; font-size: 60px; line-height: 1; letter-spacing: -1px; margin-top: 2px; color: #fff; }
+  .sub { margin-top: 4px; }
+  .sub i { font-family: Georgia, serif; font-size: 13px; color: #c9d3e2; }
+  .src { margin-left: auto; color: #8a8378; font-size: 9px; letter-spacing: .05em; }
 
   /* tags */
   .tag { font-size: 10.5px; margin: 4px 0 2px; display: flex; align-items: center; gap: 5px; }
@@ -62,9 +67,12 @@
 <body>
 
 <header>
-  <div class="topline cond"><span class="kick">The world's news on one page</span><span>31 stories from around the world · all from Tuesday 17 November</span></div>
-  <h1>Tuesday 17 November 2026</h1>
-  <div class="sub"><i>Every story here happened, or was first reported, on Tuesday 17 November 2026. Claims are attributed as claims.</i><span class="badge cond">One day · one page</span></div>
+  <div class="cal cond"><div class="mon">Nov</div><div class="day">17</div><div class="wd">Tue · 2026</div></div>
+  <div class="mast">
+    <div class="topline cond"><span>The day in world news</span><span>31 stories · 6 regions · one page</span></div>
+    <h1>Tuesday 17 November 2026</h1>
+    <div class="sub"><i>Everything on this page happened, or was first reported, on Tuesday 17 November 2026. Claims are attributed.</i></div>
+  </div>
 </header>
 
 <!-- ============ LEAD STORIES ============ -->
@@ -541,6 +549,10 @@ for (const [n, c, lon, lat, dx, dy] of PINS) {
   svgMap += `<text x="${lx.toFixed(1)}" y="${(ly + 2.6).toFixed(1)}" font-size="${n > 9 ? 6.2 : 7.2}" font-weight="700" fill="#fff" text-anchor="middle" font-family="Helvetica Neue">${n}</text>`;
 }
 document.getElementById('map').innerHTML = svgMap;
+
+// ---------- who reported each illustrated story (shown at the right of its tag line) ----------
+const SOURCES = ['SBU · AP', 'CNN · IRNA', 'JOINT STATEMENT', 'PAHO', 'NVIDIA', 'UN OHCHR', 'AP · UN', 'KNESSET', 'GMA NEWS', 'RFE/RL', 'RUSSIAN MOD', 'AP', 'REUTERS'];
+document.querySelectorAll('.lead .tag, .card .tag').forEach((tag, i) => tag.insertAdjacentHTML('beforeend', `<span class="src">${SOURCES[i]}</span>`));
 
 // ---------- briefs ----------
 const BRIEFS = [

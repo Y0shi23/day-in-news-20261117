@@ -35,7 +35,7 @@
 
   /* lead stories */
   .leads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; padding-bottom: 7px; border-bottom: 1px solid var(--rule); }
-  .lead svg { display: block; width: 100%; height: 124px; border: 1px solid #c9c0ae; }
+  .lead svg { display: block; width: 100%; height: 114px; border: 1px solid #c9c0ae; }
   .lead h2 { font-family: Georgia, serif; font-size: 22px; line-height: 1.06; letter-spacing: -.3px; }
   /* gold, silver and bronze tiles rank the three lead stories */
   .headrow { display: flex; gap: 9px; align-items: flex-start; margin-top: 5px; }
@@ -48,17 +48,18 @@
   .lead p { font-size: 12.5px; line-height: 1.25; color: #3b3732; margin-top: 3px; }
 
   /* cards */
-  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 14px; margin-top: 8px; padding-bottom: 7px; border-bottom: 1px solid var(--rule); }
-  .card svg { display: block; width: 100%; height: 72px; border: 1px solid #c9c0ae; }
-  .card .tag { font-size: 10px; margin: 4px 0 1px; }
-  .card .num { width: 15px; height: 15px; font-size: 9.5px; }
-  .card h3 { font-family: Georgia, serif; font-size: 17px; line-height: 1.08; letter-spacing: -.1px; }
-  .card p { font-size: 11.5px; line-height: 1.22; color: #3b3732; margin-top: 2px; }
+  .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px 11px; margin-top: 8px; padding-bottom: 7px; border-bottom: 1px solid var(--rule); }
+  .card svg { display: block; width: 100%; height: 66px; border: 1px solid #c9c0ae; }
+  .card .tag { font-size: 9.5px; margin: 3px 0 1px; }
+  .card .num { width: 14px; height: 14px; font-size: 9px; }
+  .card h3 { font-family: Georgia, serif; font-size: 15px; line-height: 1.08; letter-spacing: -.1px; }
+  .card p { font-size: 11px; line-height: 1.2; color: #3b3732; margin-top: 2px; }
 
   /* bottom */
   .bottom { display: grid; grid-template-columns: 360px 1fr; gap: 16px; margin-top: 7px; }
   .label { font-size: 11px; color: #a8322a; margin-bottom: 3px; }
-  #map { display: block; width: 360px; height: 138px; background: #ebe6da; border: 1px solid #cfc6b4; }
+  #map { display: block; width: 360px; height: 186px; background: #ebe6da; border: 1px solid #cfc6b4; }
+  .briefs.more li { height: 20px; }
   .legend { display: flex; flex-wrap: nowrap; gap: 7px; font-size: 9px; letter-spacing: .02em; color: var(--soft); margin-top: 3px; }
   .legend span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 3px; vertical-align: -1px; background: currentColor; }
   .figures { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; margin-top: 5px; border-top: 1px solid #cfc6b4; padding-top: 3px; }
@@ -78,7 +79,7 @@
 <header>
   <div class="cal cond"><div class="mon">Nov</div><div class="day">17</div><div class="wd">Tue · 2026</div></div>
   <div class="mast">
-    <div class="topline cond"><span>The day in world news</span><span>39 stories · 6 continents · one page</span></div>
+    <div class="topline cond"><span>The day in world news</span><span>46 stories · 6 continents · one page</span></div>
     <h1>Tuesday 17 November 2026</h1>
     <div class="sub"><i>Everything on this page happened, or was first reported, on Tuesday 17 November 2026. Claims are attributed.</i></div>
   </div>
@@ -212,8 +213,8 @@
       <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">PAHO · THE AMERICAS</text>
     </svg>
     <div class="tag cond am"><span class="num b-am">4</span>Americas · Health</div>
-    <h3>US, Mexico and Bolivia lose measles-free status</h3>
-    <p>PAHO: the virus has spread unbroken for over a year in all three.</p>
+    <h3>US, Mexico, Bolivia lose measles-free status</h3>
+    <p>PAHO: the virus spread unbroken for over a year.</p>
   </article>
 
   <article class="card">
@@ -231,8 +232,8 @@
       <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">NVIDIA'S QUARTER · WALL STREET</text>
     </svg>
     <div class="tag cond am"><span class="num b-am">5</span>US · Markets</div>
-    <h3>Nvidia's quarterly sales hit a record $115.8bn</h3>
-    <p>Up 103% on a year. Earlier the Dow fell 849 points on chip-stock jitters.</p>
+    <h3>Nvidia sales hit a record $115.8bn</h3>
+    <p>Up 103% on a year. Earlier the Dow fell 849 points.</p>
   </article>
 
   <article class="card">
@@ -252,8 +253,8 @@
       <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">SUDAN · UN RIGHTS OFFICE</text>
     </svg>
     <div class="tag cond af"><span class="num b-af">6</span>Africa · Conflict</div>
-    <h3>UN: drones killed most of Sudan's civilian dead</h3>
-    <p>2,230 civilian deaths verified Jan–Oct; drones caused more than 1,630.</p>
+    <h3>UN: drones killed most Sudan civilians</h3>
+    <p>2,230 civilian deaths verified Jan–Oct; 1,630+ by drones.</p>
   </article>
 
   <article class="card">
@@ -272,8 +273,8 @@
       <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">GAZA · WINTER IN TENTS</text>
     </svg>
     <div class="tag cond me"><span class="num b-me">7</span>Middle East · Gaza</div>
-    <h3>Board of Peace warns the Gaza truce may collapse</h3>
-    <p>Report to the UN Security Council; UN agencies say 1.4m face acute hunger.</p>
+    <h3>Board of Peace: Gaza truce may collapse</h3>
+    <p>UN agencies say 1.4m Gazans face acute hunger.</p>
   </article>
 
   <article class="card">
@@ -289,7 +290,7 @@
     </svg>
     <div class="tag cond me"><span class="num b-me">8</span>Middle East · Israel</div>
     <h3>Knesset elects Matan Kahana speaker, 66–52</h3>
-    <p>A blow to Netanyahu: Eisenkot's ally beats Likud's Katz after a filibuster.</p>
+    <p>A blow to Netanyahu: Eisenkot's ally beats Likud's Katz.</p>
   </article>
 
   <article class="card">
@@ -322,8 +323,8 @@
       <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">BELGRADE · 250-SEAT ASSEMBLY</text>
     </svg>
     <div class="tag cond eu"><span class="num b-eu">10</span>Europe · Politics</div>
-    <h3>Serbia's student-led majority takes its seats</h3>
-    <p>Student List holds 140 of 250 seats; Vučić goes into opposition.</p>
+    <h3>Serbia's student-led MPs take their seats</h3>
+    <p>Student List holds 140 of 250 seats; Vučić in opposition.</p>
   </article>
 
   <article class="card">
@@ -343,8 +344,47 @@
       <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">KEMEROVO REGION · SIBERIA</text>
     </svg>
     <div class="tag cond eu"><span class="num b-eu">11</span>Russia · Air crash</div>
-    <h3>Military An-12 crash in Siberia kills all 19</h3>
-    <p>Novosibirsk–Kansk flight; early findings point to a technical fault.</p>
+    <h3>An-12 crash in Siberia kills all 19 aboard</h3>
+    <p>Early findings point to a technical fault.</p>
+  </article>
+
+  <article class="card">
+    <svg viewBox="0 0 190 84" preserveAspectRatio="none">
+      <rect width="190" height="84" fill="#f1ece3"/>
+      <g fill="#9b968c"><rect x="124" y="24" width="60" height="38"/><polygon points="124,24 138,13 138,24 152,13 152,24 166,13 166,24 180,13 180,24 184,24"/><rect x="171" y="3" width="6" height="14"/></g>
+      <g fill="#cbc6bc"><rect x="130" y="34" width="8" height="8"/><rect x="144" y="34" width="8" height="8"/><rect x="158" y="34" width="8" height="8"/><rect x="172" y="34" width="8" height="8"/></g>
+      <g fill="#b7bac0" opacity=".85"><circle cx="102" cy="22" r="10"/><circle cx="114" cy="15" r="9"/><circle cx="90" cy="15" r="7"/></g>
+      <rect x="16" y="20" width="80" height="18" fill="#fff" stroke="#8e2a1e"/>
+      <text x="56" y="32.5" font-size="9.5" font-weight="700" fill="#8e2a1e" text-anchor="middle" font-family="Helvetica Neue">TK 30,000 NOW</text>
+      <g stroke="#5b4632" stroke-width="1.5"><line x1="22" y1="38" x2="22" y2="52"/><line x1="90" y1="38" x2="90" y2="52"/></g>
+      <g fill="#4b3a2c"><circle cx="12" cy="56" r="5"/><circle cx="24" cy="54" r="5"/><circle cx="36" cy="57" r="5"/><circle cx="48" cy="55" r="5"/><circle cx="60" cy="57" r="5"/><circle cx="72" cy="55" r="5"/><circle cx="84" cy="56" r="5"/><circle cx="96" cy="57" r="5"/><circle cx="108" cy="56" r="5"/></g>
+      <rect x="6" y="60" width="110" height="10" fill="#6a5847"/>
+      <rect y="70" width="190" height="14" fill="#1d2733"/>
+      <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">SAVAR · GAZIPUR · ASHULIA</text>
+    </svg>
+    <div class="tag cond as"><span class="num b-as">12</span>Asia · Labour</div>
+    <h3>Bangladesh police tear-gas garment workers</h3>
+    <p>They want Tk 30,000 a month, up from Tk 12,500.</p>
+  </article>
+
+  <article class="card">
+    <svg viewBox="0 0 190 84" preserveAspectRatio="none">
+      <rect width="190" height="84" fill="#e8edf4"/>
+      <polygon points="14,24 58,8 102,24" fill="#2b4a7a"/>
+      <rect x="14" y="24" width="88" height="5" fill="#2b4a7a"/>
+      <g fill="#2b4a7a"><rect x="20" y="30" width="7" height="28"/><rect x="36" y="30" width="7" height="28"/><rect x="52" y="30" width="7" height="28"/><rect x="68" y="30" width="7" height="28"/><rect x="84" y="30" width="7" height="28"/></g>
+      <rect x="10" y="58" width="96" height="6" fill="#2b4a7a"/>
+      <text x="58" y="21" font-size="7" font-weight="700" fill="#fff" text-anchor="middle" font-family="Helvetica Neue">BANK</text>
+      <g fill="#fff" stroke="#7d8794"><rect x="112" y="10" width="16" height="20" transform="rotate(-12 120 20)"/><rect x="134" y="16" width="16" height="20" transform="rotate(10 142 26)"/><rect x="118" y="38" width="16" height="20" transform="rotate(6 126 48)"/></g>
+      <text x="170" y="28" font-size="15" font-weight="700" fill="#2b4a7a" text-anchor="middle" font-family="Georgia">15m</text>
+      <text x="170" y="38" font-size="6.5" font-weight="700" fill="#2b4a7a" text-anchor="middle" font-family="Helvetica Neue">RECORDS</text>
+      <polygon points="160,44 180,44 170,60" fill="#c0392b"/>
+      <rect y="70" width="190" height="14" fill="#1d2733"/>
+      <text x="95" y="80" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing=".6" font-family="Helvetica Neue">FRANKFURT · THE LEAKED FILES</text>
+    </svg>
+    <div class="tag cond eu"><span class="num b-eu">13</span>Europe · Banking</div>
+    <h3>Deutsche Bank shares fall after a mass leak</h3>
+    <p>Media publish files from 15m records; bank says issues are old.</p>
   </article>
 
 
@@ -354,7 +394,7 @@
 <section class="bottom">
   <div>
     <div class="label cond">Where it happened</div>
-    <svg id="map" viewBox="0 0 360 138"></svg>
+    <svg id="map" viewBox="0 0 360 186"></svg>
     <div class="legend cond">
       <span class="eu">Europe/Russia</span><span class="me">Middle East</span><span class="as">Asia-Pacific</span><span class="af">Africa</span><span class="am">Americas</span><span class="gl">Global</span>
     </div>
@@ -366,7 +406,7 @@
   </div>
 </section>
 
-<footer><span>Sources: Reuters, AP, AFP, Al Jazeera, CNN, NBC, Times of Israel, UN OHCHR, PAHO, IOM/WFP, Nvidia, IMD.</span><span>Original drawings · map pins 1–11, dots 12–39</span></footer>
+<footer><span>Sources: Reuters, AP, AFP, Al Jazeera, CNN, NBC, Times of Israel, UN OHCHR, PAHO, IOM/WFP, Nvidia, IMD.</span><span>Original drawings · map pins 1–13, dots 14–46</span></footer>
 
 <script>
 // ---------- flags ----------
@@ -449,9 +489,10 @@ hemicycle(document.getElementById('knesset'), 95, 64, 18, 50, 5, [[66, '#2f5d9e'
 hemicycle(document.getElementById('serbia'), 95, 64, 16, 50, 7, [[140, '#1c8c7e'], [7, '#c7c7c7'], [103, '#c6363c']], 1.75);
 
 // ---------- world map (equirectangular, lon -128..180, lat 72..-46) ----------
-const K = 360 / 308;
+// stretched vertically so the map fills its column: lon -128..180 across 360px, lat 74..-48 down 186px
+const K = 360 / 308, KY = 186 / 122;
 const px = (lon) => (lon + 128) * K;
-const py = (lat) => (72 - lat) * K;
+const py = (lat) => (74 - lat) * KY;
 const LAND = [
   // North America
   [-168,66,-162,70,-156,71.3,-140,69.6,-128,70,-115,68.5,-95,72,-82,73,-80,69,-90,64,-94,59,-88,56,-82,53,-79,55,-76,62,-68,58.5,-62,57,-56,52,-60,47,-66,45,-70,43,-74,40.5,-76,37,-75.5,35,-81,31,-80,26,-81.5,25,-83,29.5,-89,30,-94,29.5,-97,26,-97.5,22,-95,19,-91,19,-90.5,21.3,-87,21.5,-88,16,-84,15,-83,11,-79.5,9,-77.5,8.5,-80,7.5,-83,8.5,-86,11,-88,13.2,-92,14.5,-96,15.7,-101,17.5,-105.5,20,-105,22.5,-109,25.5,-112.5,29.5,-114.5,31.5,-113,29,-110,23,-112,24.5,-115,28,-117,32.5,-120.5,34.5,-124,40,-124.5,46,-123,48.5,-127,50.5,-131,54,-134,57.5,-140,60,-146,61,-152,59,-158,57,-163,55,-158,58.5,-162,60,-165,62.5,-164,64.5],
@@ -506,10 +547,10 @@ const inside = (a, lon, lat) => {
   return hit;
 };
 let svgMap = '';
-const STEP = 4.4;
-for (let y = STEP / 2; y < 138; y += STEP) {
+const STEP = 4.5;
+for (let y = STEP / 2; y < 186; y += STEP) {
   for (let x = STEP / 2; x < 360; x += STEP) {
-    const lon = x / K - 128, lat = 72 - y / K;
+    const lon = x / K - 128, lat = 74 - y / KY;
     if (LAND.some((p) => inside(p, lon, lat)) && !WATER.some((p) => inside(p, lon, lat))) {
       svgMap += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.5" fill="#aba390"/>`;
     }
@@ -521,14 +562,15 @@ const COLORS = { eu: '#2f5d9e', me: '#c0711a', as: '#7b4fa6', af: '#2e8b57', am:
 const PINS = [
   [1, 'eu', 36.5, 45.3, 6, -8], [2, 'me', 56, 26.8, 8, 4], [3, 'as', 121, 14.6, 0, 0], [4, 'am', -99.1, 19.4, 0, 0],
   [5, 'am', -122, 37.4, 4, -4], [6, 'af', 30, 15, 0, 0], [7, 'me', 34.4, 31.4, -11, 8], [8, 'me', 35.2, 31.8, 9, -2],
-  [9, 'as', 106.9, 47.9, 0, 0], [10, 'eu', 20.5, 44.8, -2, 6], [11, 'eu', 86, 55.3, 0, 0],
+  [9, 'as', 106.9, 47.9, 0, 0], [10, 'eu', 20.5, 44.8, -2, 8], [11, 'eu', 86, 55.3, 0, 0], [12, 'as', 90.4, 23.8, 0, 2], [13, 'eu', 8.7, 50.1, -8, -8],
 ];
 // small dots for the briefs
 const DOTS = [
   ['eu', 37.6, 55.8], ['eu', 28.8, 47], ['eu', 30.5, 50.4], ['eu', 21, 52.2], ['eu', 2.35, 48.9], ['eu', 29, 41], ['eu', -0.1, 51.5],
   ['am', -74, 40.7], ['as', 114, 22.5], ['am', -75.7, 45.4], ['as', 130.4, 33.6], ['as', 83, 16], ['af', 32.6, -25.9], ['gl', 30.7, 36.9], ['gl', -122, 37.3], ['as', 100.5, 13.75],
   ['eu', 14.4, 50.1], ['as', 127, 37.5], ['as', 129.5, -7], ['af', 39, 3.5],
-  ['as', 101.7, 3.1], ['eu', 4.3, 52.1], ['me', 48, 29.4], ['as', 90.4, 23.8], ['eu', 8.7, 50.1],
+  ['as', 101.7, 3.1], ['eu', 4.3, 52.1], ['me', 48, 29.4],
+  ['af', 6.1, 46.2], ['me', 35.45, 31.85], ['me', 58.4, 23.6], ['eu', 12.45, 41.9], ['as', 78.4, 30.4], ['as', 149.1, -35.3],
 ];
 for (const [c, lon, lat] of DOTS) svgMap += `<circle cx="${px(lon).toFixed(1)}" cy="${py(lat).toFixed(1)}" r="2.2" fill="${COLORS[c]}" stroke="#fff" stroke-width=".5"/>`;
 for (const [n, c, lon, lat, dx, dy] of PINS) {
@@ -540,7 +582,7 @@ for (const [n, c, lon, lat, dx, dy] of PINS) {
 document.getElementById('map').innerHTML = svgMap;
 
 // ---------- who reported each illustrated story (shown at the right of its tag line) ----------
-const SOURCES = ['SBU · AP', 'CNN · IRNA', 'JOINT STATEMENT', 'PAHO', 'NVIDIA', 'UN OHCHR', 'AP · UN', 'KNESSET', 'GMA NEWS', 'RFE/RL', 'RUSSIAN MOD'];
+const SOURCES = ['SBU · AP', 'CNN · IRNA', 'JOINT STATEMENT', 'PAHO', 'NVIDIA', 'UN OHCHR', 'AP · UN', 'KNESSET', 'GMA NEWS', 'RFE/RL', 'RUSSIAN MOD', 'AP', 'REUTERS'];
 document.querySelectorAll('.lead .tag, .card .tag').forEach((tag, i) => tag.insertAdjacentHTML('beforeend', `<span class="src">${SOURCES[i]}</span>`));
 
 // ---------- the card drawings were made 190 wide; widen each viewBox to the card's shape and stretch its full-width bands ----------
@@ -556,9 +598,11 @@ document.querySelectorAll('.card svg').forEach((svg) => {
 // ---------- briefs ----------
 const BRIEFS = [
   ['eu', 'Russia', 'says it downed 1,441 Ukrainian drones'],
+  ['eu', 'Kyiv', 'Russian missiles hit two Dnipro bridges'],
   ['eu', 'Moldova', 'airspace shut as drone crosses Chișinău'],
-  ['as', 'Bangladesh', 'police tear-gas wage protesters'],
-  ['eu', 'Deutsche Bank', 'shares fall after a mass leak'],
+  ['af', 'WHO', 'Ebola in DR Congo still a global emergency'],
+  ['me', 'West Bank', 'woman, 72, killed in settler attack'],
+  ['me', 'Oman', 'Iran’s Araghchi holds Hormuz shipping talks'],
   ['eu', 'UN', 'Ukraine’s civilian deaths already top 2025’s'],
   ['eu', 'Poland', 'Tusk beats no-confidence vote, 242–200'],
   ['eu', 'France', 'pay strike; 146,000 march (official count)'],
@@ -583,9 +627,12 @@ const BRIEFS = [
   ['eu', 'Kosovo', 'ex-president Thaçi gets 17 more months'],
   ['me', 'Kuwait', 'air defences fire on hostile drones'],
   ['as', 'Cook Islands', 'Cyclone Xavier hits Category 3'],
+  ['eu', 'Vatican', 'Pope Leo XIV back from South America'],
+  ['as', 'India', 'bus plunges into Uttarakhand gorge; 8 dead'],
+  ['as', 'Australia', 'eases planned backpacker visa curbs'],
 ];
-const brief = ([c, where, what], i) => `<li><span class="num b-${c}">${i + 12}</span><span><b class="${c}">${where}:</b> ${what}</span></li>`;
-const RIGHT = 24;
+const brief = ([c, where, what], i) => `<li><span class="num b-${c}">${i + 14}</span><span><b class="${c}">${where}:</b> ${what}</span></li>`;
+const RIGHT = 28;
 document.getElementById('briefs').innerHTML = BRIEFS.slice(0, RIGHT).map(brief).join('');
 document.getElementById('briefs2').innerHTML = BRIEFS.slice(RIGHT).map((b, i) => brief(b, i + RIGHT)).join('');
 </script>
